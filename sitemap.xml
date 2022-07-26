@@ -2,6 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://imounttai.github.io/404.html</loc>
+    
+    <lastmod>2022-07-26T13:40:35.965Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://imounttai.github.io/tags/index.html</loc>
+    
+    <lastmod>2022-07-26T13:40:21.643Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://imounttai.github.io/friends/index.html</loc>
+    
+    <lastmod>2022-07-26T13:40:12.193Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://imounttai.github.io/contact/index.html</loc>
+    
+    <lastmod>2022-07-26T13:39:48.026Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://imounttai.github.io/about/index.html</loc>
+    
+    <lastmod>2022-07-26T13:38:19.444Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://imounttai.github.io/archives/index.html</loc>
+    
+    <lastmod>2022-07-26T13:37:15.126Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://imounttai.github.io/categories/index.html</loc>
+    
+    <lastmod>2022-07-26T13:37:07.478Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://imounttai.github.io/bert-lstm.html</loc>
     
     <lastmod>2022-07-26T08:09:07.825Z</lastmod>
@@ -12,55 +61,6 @@
     <loc>https://imounttai.github.io/di-yi-pian-wen-zhang.html</loc>
     
     <lastmod>2022-07-25T18:11:11.570Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://imounttai.github.io/tags/index.html</loc>
-    
-    <lastmod>2022-07-25T12:46:13.180Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://imounttai.github.io/friends/index.html</loc>
-    
-    <lastmod>2022-07-25T12:46:13.150Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://imounttai.github.io/contact/index.html</loc>
-    
-    <lastmod>2022-07-25T12:46:13.130Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://imounttai.github.io/categories/index.html</loc>
-    
-    <lastmod>2022-07-25T12:46:13.109Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://imounttai.github.io/archives/index.html</loc>
-    
-    <lastmod>2022-07-25T12:46:13.089Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://imounttai.github.io/about/index.html</loc>
-    
-    <lastmod>2022-07-25T12:46:13.070Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://imounttai.github.io/404.html</loc>
-    
-    <lastmod>2022-07-25T12:46:12.983Z</lastmod>
     
   </url>
   
