@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://imounttai.github.io/contact/index.html</loc>
+    
+    <lastmod>2022-07-27T05:51:58.766Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://imounttai.github.io/distilling-task-specific-knowledge-from-bert-into-simple-neural-networks.html</loc>
     
     <lastmod>2022-07-27T04:16:20.433Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://imounttai.github.io/friends/index.html</loc>
     
     <lastmod>2022-07-26T13:40:12.193Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://imounttai.github.io/contact/index.html</loc>
-    
-    <lastmod>2022-07-26T13:39:48.026Z</lastmod>
     
   </url>
   
