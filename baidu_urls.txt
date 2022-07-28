@@ -1,1 +1,1 @@
-https://imounttai.github.io/distilling-task-specific-knowledge-from-bert-into-simple-neural-networks.html
+https://imounttai.github.io/bert-to-lstm.html
