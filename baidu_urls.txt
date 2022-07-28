@@ -1,2 +1,1 @@
 https://imounttai.github.io/distilling-task-specific-knowledge-from-bert-into-simple-neural-networks.html
-https://imounttai.github.io/di-yi-pian-wen-zhang.html
