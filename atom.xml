@@ -6,7 +6,7 @@
   <link href="https://imounttai.github.io/atom.xml" rel="self"/>
   
   <link href="https://imounttai.github.io/"/>
-  <updated>2022-07-28T12:31:51.292Z</updated>
+  <updated>2022-07-28T13:33:05.241Z</updated>
   <id>https://imounttai.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://imounttai.github.io/bert-to-lstm.html"/>
     <id>https://imounttai.github.io/bert-to-lstm.html</id>
     <published>2022-07-26T02:17:19.000Z</published>
-    <updated>2022-07-28T12:31:51.292Z</updated>
+    <updated>2022-07-28T13:33:05.241Z</updated>
     
     
       
@@ -40,6 +40,8 @@
     
     
     <category term="知识蒸馏" scheme="https://imounttai.github.io/tags/%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8F/"/>
+    
+    <category term="BERT" scheme="https://imounttai.github.io/tags/BERT/"/>
     
   </entry>
   

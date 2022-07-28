@@ -605,6 +605,10 @@
                             <span class="chip bg-color">知识蒸馏</span>
                         </a>
                         
+                        <a href="/tags/BERT/" target="_blank">
+                            <span class="chip bg-color">BERT</span>
+                        </a>
+                        
                     </div>
                     
                 </div>
@@ -669,7 +673,11 @@
                 <p>论文<br><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1903.12136.pdf">Distilling Task-Specific Knowledge from BERT into Simple Neural Networks</a></p>
 <h1 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1 介绍"></a>1 介绍</h1><h1 id="2-相关工作"><a href="#2-相关工作" class="headerlink" title="2 相关工作"></a>2 相关工作</h1><p><strong>模型压缩</strong> 一项突出的工作致力于压缩大型神经网络以加速推理.早期的开创性工作包括LeCun等人(1990)，他们提出了一种基于局部误差的方法来修剪不重要的权重。最近，Han等人(2015)提出了一种简单的压缩pipeline，在不损害精度的情况下，实现了模型尺寸的40倍缩小。不幸的是，这些技术导致不规则的权重稀疏，这排除了高度优化的计算例程。</p>
 <h1 id="3-文章的工作"><a href="#3-文章的工作" class="headerlink" title="3 文章的工作"></a>3 文章的工作</h1><h2 id="3-1-模型结构"><a href="#3-1-模型结构" class="headerlink" title="3.1 模型结构"></a>3.1 模型结构</h2><p>教师模型采用预训练微调的BERT，对于输入的句子对，通过BERT计算一个特征向量$h$,在$h$的基础上构建任务分类器。对于单一句子分类，直接构建softmax层，预测概率为$y^{B}=softmax(Wh)$,$W \in \Bbb{R}^{k \times d}$是softmax的权重矩阵,$k$为标签数量。对于句子对任务，拼接两个句子的BERT特征向量送进softmax层。在训练过程中，我们利用交叉熵损失最大化正确标签的概率，联合微调BERT和分类器的参数</p>
-<p>相比之下，我们的学生模型是单层的具有非线性分类器的BiLSTM。将输入词嵌入输入BiLSTM后，将每个方向上最后一步的隐藏状态拼接，输入带有ReLUs的全连接层，该层的输出再传递到softmax层进行分类.<br><img src="/source/_posts/bert_to_lstm/figure1.jpg" alt=""><br>对于句子对任务，在两个句子编码（$h_{s1}$和$h_{s2}$）的连体结构中共享BiLSTM的编码器，如下图所示<br><img src="/source/_posts/bert_to_lstm/f2.jpg" alt=""><br>然后对两个句子向量应用标准的concatenate–compare操作$f(h_{s1},h_{s2})=[h_{s1},h_{s2},h_{s1} \odot h_{s2},|h_{s1}-h_{s2}|]$，$\odot$表示按元素乘法。然后把该输出送到ReLU激活的分类器中。</p>
+<p>相比之下，我们的学生模型是单层的具有非线性分类器的BiLSTM。将输入词嵌入输入BiLSTM后，将每个方向上最后一步的隐藏状态拼接，输入带有ReLUs的全连接层，该层的输出再传递到softmax层进行分类.</p>
+<img src="/bert-to-lstm/figure1.jpg" class>
+<p>对于句子对任务，在两个句子编码（$h_{s1}$和$h_{s2}$）的连体结构中共享BiLSTM的编码器，如下图所示</p>
+<img src="/bert-to-lstm/f2.jpg" class>
+<p>然后对两个句子向量应用标准的concatenate–compare操作$f(h_{s1},h_{s2})=[h_{s1},h_{s2},h_{s1} \odot h_{s2},|h_{s1}-h_{s2}|]$，$\odot$表示按元素乘法。然后把该输出送到ReLU激活的分类器中。</p>
 <p>应该强调的是，为了重新审视BiLSTM本身的表示能力，约束了工程实现。我们避免了任何额外的技巧，比如注意和层归一化。</p>
 <h2 id="3-2-蒸馏目的"><a href="#3-2-蒸馏目的" class="headerlink" title="3.2 蒸馏目的"></a>3.2 蒸馏目的</h2><p>给定数据，学生模型模仿教师模型的输出。除了最后的标签，教师模型的预测概率同样重要。在二分类情感分析中，一些句子具有较强的情感属性，一些句子则是中性的。如果只用最后的预测标签训练学生模型，会丢失不确定性预测的有价值信息。softmax的参数认为是logits。学生模型在logits上训练使得训练更容易，因为教师模型在所有目标上学到的关系是同等重要的。</p>
 <p>使用MSE损失实现$\mathcal{L}_{distill} = ||z^(B)-z^(S)||_2^2$，$z^(B)$和$z^(S)$分别是教师模型和学生的logits.交叉熵损失其实也行，但是本文实验证明MSE更好一点。</p>
@@ -1213,6 +1221,10 @@
                         <span class="chip bg-color">知识蒸馏</span>
                     </a>
                     
+                    <a href="/tags/BERT/" target="_blank">
+                        <span class="chip bg-color">BERT</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1266,6 +1278,10 @@
                     
                     <a href="/tags/%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8F/" target="_blank">
                         <span class="chip bg-color">知识蒸馏</span>
+                    </a>
+                    
+                    <a href="/tags/BERT/" target="_blank">
+                        <span class="chip bg-color">BERT</span>
                     </a>
                     
                 </div>
