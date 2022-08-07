@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>iMountTai`s Blog</title>
+  
+  <subtitle>iMountTai</subtitle>
+  <link href="https://imounttai.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://imounttai.github.io/"/>
+  <updated>2022-08-07T12:21:57.988Z</updated>
+  <id>https://imounttai.github.io/</id>
+  
+  <author>
+    <name>yao</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MobileBERT a Compact Task-Agnostic BERT for Resource-Limited Devices</title>
+    <link href="https://imounttai.github.io/mobilebert.html"/>
+    <id>https://imounttai.github.io/mobilebert.html</id>
+    <published>2022-08-07T06:38:45.000Z</published>
+    <updated>2022-08-07T12:21:57.988Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;论文&lt;br&gt;&lt;a href=&quot;https://arxiv.org/pdf/2004.02984.pdf&quot;&gt;MobileBERT: a Compact Task-Agnostic BERT for Resource-Limited Devices&lt;/a&gt;&lt;/p&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="人工智能" scheme="https://imounttai.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="NLP" scheme="https://imounttai.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/NLP/"/>
+    
+    
+    <category term="知识蒸馏" scheme="https://imounttai.github.io/tags/%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8F/"/>
+    
+    <category term="BERT" scheme="https://imounttai.github.io/tags/BERT/"/>
+    
+    <category term="KD" scheme="https://imounttai.github.io/tags/KD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Distilling Task-Specific Knowledge from BERT into Simple Neural Networks</title>
+    <link href="https://imounttai.github.io/bert-to-lstm.html"/>
+    <id>https://imounttai.github.io/bert-to-lstm.html</id>
+    <published>2022-07-26T02:17:19.000Z</published>
+    <updated>2022-08-07T06:51:24.054Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;论文&lt;br&gt;&lt;a href=&quot;https://arxiv.org/pdf/1903.12136.pdf&quot;&gt;Distilling Task-Specific Knowledge from BERT into Simple Neural</summary>
+        
+      
+    
+    
+    
+    <category term="人工智能" scheme="https://imounttai.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="NLP" scheme="https://imounttai.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/NLP/"/>
+    
+    
+    <category term="知识蒸馏" scheme="https://imounttai.github.io/tags/%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8F/"/>
+    
+    <category term="BERT" scheme="https://imounttai.github.io/tags/BERT/"/>
+    
+    <category term="KD" scheme="https://imounttai.github.io/tags/KD/"/>
+    
+  </entry>
+  
+</feed>
