@@ -6,7 +6,7 @@
   <link href="https://imounttai.github.io/atom.xml" rel="self"/>
   
   <link href="https://imounttai.github.io/"/>
-  <updated>2023-03-11T15:23:40.749Z</updated>
+  <updated>2023-03-11T15:45:06.316Z</updated>
   <id>https://imounttai.github.io/</id>
   
   <author>
@@ -21,17 +21,14 @@
     <link href="https://imounttai.github.io/deepspeed.html"/>
     <id>https://imounttai.github.io/deepspeed.html</id>
     <published>2023-03-11T14:27:04.000Z</published>
-    <updated>2023-03-11T15:23:40.749Z</updated>
+    <updated>2023-03-11T15:45:06.316Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;train_batch_size：设置训练时的批量大小1。&lt;/li&gt;
-&lt;li&gt;gradient_accumulation_steps：设置梯度累积的步数，以减少通信开销和内存占用1。&lt;/li&gt;
-&lt;li&gt;fp16：设置是否使用混合精度训练，以提高速度和减少内存占用</summary>
+    <summary type="html">&lt;p&gt;deepspeed config</summary>
         
       
     
