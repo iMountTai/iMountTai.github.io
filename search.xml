@@ -11,6 +11,22 @@
         <content type="html"><![CDATA[<ul><li>train_batch_size：设置训练时的批量大小1。</li><li>gradient_accumulation_steps：设置梯度累积的步数，以减少通信开销和内存占用1。</li><li>fp16：设置是否使用混合精度训练，以提高速度和减少内存占用1。</li><li>zero_optimization：设置是否使用ZeRO优化器，以进一步减少内存占用和提高扩展性1。</li><li>optimizer：设置训练优化器的类型和参数，如Adam、Lamb等12。</li><li>scheduler：设置学习率调度器的类型和参数，如WarmupLR、OneCycle等12。</li><li>train_micro_batch_size_per_gpu：设置每个GPU上训练时的微批量大小1。</li><li>steps_per_print：设置每隔多少步打印训练日志1。</li><li>wall_clock_breakdown：设置是否记录训练过程中各个部分的时间消耗1。</li><li>communication_data_type：设置通信时使用的数据类型，如float16、float32等1。</li><li>sparse_gradients：设置是否使用稀疏梯度，以减少通信开销1。</li><li>gradient_clipping：设置是否使用梯度裁剪，以防止梯度爆炸1。</li><li>prescale_gradients：设置是否在累积梯度之前进行缩放，以防止数值溢出</li></ul>]]></content>
       
       
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+          <category> NLP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LLM </tag>
+            
+            <tag> chatgpt </tag>
+            
+        </tags>
       
     </entry>
     
