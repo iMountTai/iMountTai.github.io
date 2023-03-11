@@ -4,12 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Distilling Task-Specific Knowledge from BERT into Simple Neural Networks, 被动学习">
+    <meta name="keywords" content="deepspeed, 被动学习">
     <meta name="baidu-site-verification" content="code-0cpWDYunkM" />
     <meta name="google-site-verification" content="ERyD9x2BzhwQPlITH_IY7aZZUGfb1ZWGrZSDraIYlWw" />
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" />
-    <meta name="description" content="论文Distilling Task-Specific Knowledge from BERT into Simple Neural Networks
-1 介绍2 相关工作模型压缩 一项突出的工作致力于压缩大型神经网络以加速推理.早期的开创性">
+    <meta name="description" content="
+train_batch_size：设置训练时的批量大小1。
+gradient_accumulation_steps：设置梯度累积的步数，以减少通信开销和内存占用1。
+fp16：设置是否使用混合精度训练，以提高速度和减少内存占用1。
+zer">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Distilling Task-Specific Knowledge from BERT into Simple Neural Networks | iMountTai`s Blog</title>
+    <title>deepspeed | iMountTai`s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -468,13 +471,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Distilling Task-Specific Knowledge from BERT into Simple Neural Networks
+                        deepspeed
                     </div>
                 </div>
             </div>
@@ -584,36 +587,11 @@
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        
-                        <a href="/tags/%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8F/" target="_blank">
-                            <span class="chip bg-color">知识蒸馏</span>
-                        </a>
-                        
-                        <a href="/tags/BERT/" target="_blank">
-                            <span class="chip bg-color">BERT</span>
-                        </a>
-                        
-                        <a href="/tags/KD/" target="_blank">
-                            <span class="chip bg-color">KD</span>
-                        </a>
-                        
+                        <span class="chip bg-color">无标签</span>
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                        <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
-                            人工智能
-                        </a>
-                        
-                        <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/NLP/" class="post-category" target="_blank">
-                            NLP
-                        </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -621,7 +599,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-07-26
+                    2023-03-11
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -635,14 +613,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    257
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    1 分
                 </div>
                 
                 
@@ -658,23 +636,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>论文<br><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1903.12136.pdf">Distilling Task-Specific Knowledge from BERT into Simple Neural Networks</a></p>
-<h1 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1 介绍"></a>1 介绍</h1><h1 id="2-相关工作"><a href="#2-相关工作" class="headerlink" title="2 相关工作"></a>2 相关工作</h1><p><strong>模型压缩</strong> 一项突出的工作致力于压缩大型神经网络以加速推理.早期的开创性工作包括LeCun等人(1990)，他们提出了一种基于局部误差的方法来修剪不重要的权重。最近，Han等人(2015)提出了一种简单的压缩pipeline，在不损害精度的情况下，实现了模型尺寸的40倍缩小。不幸的是，这些技术导致不规则的权重稀疏，这排除了高度优化的计算例程。</p>
-<h1 id="3-文章的工作"><a href="#3-文章的工作" class="headerlink" title="3 文章的工作"></a>3 文章的工作</h1><h2 id="3-1-模型结构"><a href="#3-1-模型结构" class="headerlink" title="3.1 模型结构"></a>3.1 模型结构</h2><p>教师模型采用预训练微调的BERT，对于输入的句子对，通过BERT计算一个特征向量$h$,在$h$的基础上构建任务分类器。对于单一句子分类，直接构建softmax层，预测概率为$y^{B}=softmax(Wh)$,$W \in \Bbb{R}^{k \times d}$是softmax的权重矩阵,$k$为标签数量。对于句子对任务，拼接两个句子的BERT特征向量送进softmax层。在训练过程中，我们利用交叉熵损失最大化正确标签的概率，联合微调BERT和分类器的参数</p>
-<p>相比之下，我们的学生模型是单层的具有非线性分类器的BiLSTM。将输入词嵌入输入BiLSTM后，将每个方向上最后一步的隐藏状态拼接，输入带有ReLUs的全连接层，该层的输出再传递到softmax层进行分类.</p>
-<img src="/bert-to-lstm/figure1.jpg" class>
-<p>对于句子对任务，在两个句子编码（$h_{s1}$和$h_{s2}$）的连体结构中共享BiLSTM的编码器，如下图所示</p>
-<img src="/bert-to-lstm/f2.jpg" class>
-<p>然后对两个句子向量应用标准的concatenate–compare操作$f(h_{s1},h_{s2})=[h_{s1},h_{s2},h_{s1} \odot h_{s2},|h_{s1}-h_{s2}|]$，$\odot$表示按元素乘法。然后把该输出送到ReLU激活的分类器中。</p>
-<p>应该强调的是，为了重新审视BiLSTM本身的表示能力，约束了工程实现。我们避免了任何额外的技巧，比如注意和层归一化。</p>
-<h2 id="3-2-蒸馏目的"><a href="#3-2-蒸馏目的" class="headerlink" title="3.2 蒸馏目的"></a>3.2 蒸馏目的</h2><p>给定数据，学生模型模仿教师模型的输出。除了最后的标签，教师模型的预测概率同样重要。在二分类情感分析中，一些句子具有较强的情感属性，一些句子则是中性的。如果只用最后的预测标签训练学生模型，会丢失不确定性预测的有价值信息。softmax的参数认为是logits。学生模型在logits上训练使得训练更容易，因为教师模型在所有目标上学到的关系是同等重要的。</p>
-<p>使用MSE损失实现$\mathcal{L}_{distill} = ||z^{(B)}-z^{(S)}||_2^2$，$z^{(B)}$和$z^{(S)}$分别是教师模型和学生的logits.交叉熵损失其实也行，但是本文实验证明MSE更好一点。</p>
-<p>训练损失：<br>$\mathcal{L}=\alpha \cdot \mathcal{L}_{CE}+(1-\alpha) \cdot \mathcal{L}_{distill} = -\alpha \sum_{i} t_i \log {y_i^{(S)}} - (1 - \alpha)||z^{(B)}-z^{(S)}||_2^2$<br>其中$t$是ground_truth_label。对于没有标签的数据，预测label使用教师模型预测的label，即$t_i=1$如果$i=\operatorname{argmax} {y^{(B)}}$否则为0</p>
-<h2 id="3-3-数据增强"><a href="#3-3-数据增强" class="headerlink" title="3.3 数据增强"></a>3.3 数据增强</h2><p>利用教师提供的伪标签（pseudo-labels），用一个大的、未标记的数据集来增强训练集，以帮助有效地提取知识。具体来说，随机执行以下操作：<br><strong>masking</strong>：给定一个概率$p_{mask}$，随机用toekn <em>[MASK]</em> 代替,对应于我们的模型中的未知标记和BERT中的掩码字标记.文章认为该工作能阐明每个词对标签的贡献。<br><strong>POS-guided word replacement</strong>，给定一个概率$p_{post}$,将该单词替换为相同词性（POS）的标签。为了保证原始训练分布，新单词从由词性 (POS) 标签重新归一化的一元词分布中采样。例如将 “What do pigs eat” 替换成 “How do pigs eat”。<br><strong>n-gram sampling</strong>：给定一个概率$p_{ng}$,在 1-5 中随机采样得到 n，然后采用 n-gram，去掉其他单词。这个规则在概念上等同于去掉示例中的所有其他单词，这是一种更激进的屏蔽形式。<br>流程如下：给定一个训练例子{$w_1,…w_n$},迭代单词$w_i$制uniform distribution,如果$x_i&lt;p_{mask}$，对$w_i$进行masking操作，如果$p_{mask} \le x_i&lt;p_{mask}+p_{pos}$，则进行POS-guided word replacement，这两种操作是相互排斥的，即一旦应用了一条规则，另一条就会被忽略。遍历单词之后，在整个合成的例子中采用n-gram采样。这个最后合成的例子加入到增强的无监督数据集中。<br>对单一样本进行n次迭代处理生成n个采样结果。对于句子对任务，我们通过只增强第一个句子(保持第二个固定值)、只增强第二个句子(保持第一个固定值)和两个句子进行循环。</p>
-<h1 id="4-实验设置"><a href="#4-实验设置" class="headerlink" title="4 实验设置"></a>4 实验设置</h1><p>使用$BERT_{LARGE}$作为教师模型，加载预训练权重并遵循原始、特定任务的微调。文章微调是，选择用Adam优化器并设置学习率为{2，3，4，5}*$10^{-5}$,然后选择验证集上效果最好的模型。<br>学生模型，将原始数据及合成数据送给教师模型预测获得预测标签（soft logit targets），用以蒸馏$BiLSTM_{SOFT}$，即设置$\alpha = 0$，这种效果是最好的。</p>
-<h2 id="4-1-数据集"><a href="#4-1-数据集" class="headerlink" title="4.1 数据集"></a>4.1 数据集</h2><p>SST-2,MNLI,QQP</p>
-<h2 id="4-2-超参"><a href="#4-2-超参" class="headerlink" title="4.2 超参"></a>4.2 超参</h2><p>看论文吧</p>
-<h1 id="5-结论"><a href="#5-结论" class="headerlink" title="5 结论"></a>5 结论</h1><p>效果比不上大模型，但是比原始的LSTM好，相对大模型就是参数少，响应快。文章认为较浅的bilstm对自然语言任务的表达能力比之前认为的更强</p>
+                <ul>
+<li>train_batch_size：设置训练时的批量大小1。</li>
+<li>gradient_accumulation_steps：设置梯度累积的步数，以减少通信开销和内存占用1。</li>
+<li>fp16：设置是否使用混合精度训练，以提高速度和减少内存占用1。</li>
+<li>zero_optimization：设置是否使用ZeRO优化器，以进一步减少内存占用和提高扩展性1。</li>
+<li>optimizer：设置训练优化器的类型和参数，如Adam、Lamb等12。</li>
+<li>scheduler：设置学习率调度器的类型和参数，如WarmupLR、OneCycle等12。</li>
+<li>train_micro_batch_size_per_gpu：设置每个GPU上训练时的微批量大小1。</li>
+<li>steps_per_print：设置每隔多少步打印训练日志1。</li>
+<li>wall_clock_breakdown：设置是否记录训练过程中各个部分的时间消耗1。</li>
+<li>communication_data_type：设置通信时使用的数据类型，如float16、float32等1。</li>
+<li>sparse_gradients：设置是否使用稀疏梯度，以减少通信开销1。</li>
+<li>gradient_clipping：设置是否使用梯度裁剪，以防止梯度爆炸1。</li>
+<li>prescale_gradients：设置是否在累积梯度之前进行缩放，以防止数值溢出</li>
+</ul>
 
             </div>
             <hr />
@@ -833,9 +809,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Distilling Task-Specific Knowledge from BERT into Simple Neural Networks》
+                    《deepspeed》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/bert-to-lstm.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/deepspeed.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 yao
             </a> 采用
@@ -876,7 +852,7 @@
         repo: 'iMountTai.github.io',
         owner: 'iMountTai',
         admin: "iMountTai",
-        id: 'bert-to-lstm.html',
+        id: 'deepspeed.html',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1160,9 +1136,49 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/deepspeed.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="deepspeed">
+                        
+                        <span class="card-title">deepspeed</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+train_batch_size：设置训练时的批量大小1。
+gradient_accumulation_steps：设置梯度累积的步数，以减少通信开销和内存占用1。
+fp16：设置是否使用混合精度训练，以提高速度和减少内存占用1。
+zer
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-11
+                            </span>
+                        <span class="publish-author">
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/mobilebert.html">
                     <div class="card-image">
@@ -1181,70 +1197,8 @@ introductionMobileBERT被设计成和$BERT_{large}$一样深，而每一
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-08-07
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
-                                    人工智能
-                                </a>
-                            
-                            <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/NLP/" class="post-category" target="_blank">
-                                    NLP
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8F/" target="_blank">
-                        <span class="chip bg-color">知识蒸馏</span>
-                    </a>
-                    
-                    <a href="/tags/BERT/" target="_blank">
-                        <span class="chip bg-color">BERT</span>
-                    </a>
-                    
-                    <a href="/tags/KD/" target="_blank">
-                        <span class="chip bg-color">KD</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
-            </div>
-            <div class="card">
-                <a href="/bert-to-lstm.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Distilling Task-Specific Knowledge from BERT into Simple Neural Networks">
-                        
-                        <span class="card-title">Distilling Task-Specific Knowledge from BERT into Simple Neural Networks</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            论文Distilling Task-Specific Knowledge from BERT into Simple Neural Networks
-1 介绍2 相关工作模型压缩 一项突出的工作致力于压缩大型神经网络以加速推理.早期的开创性
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-07-26
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-08-07
                             </span>
                         <span class="publish-author">
                             
@@ -1262,7 +1216,6 @@ introductionMobileBERT被设计成和$BERT_{large}$一样深，而每一
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
