@@ -11,6 +11,22 @@
         <content type="html"><![CDATA[<p>论文<a href="https://arxiv.org/abs/2306.09782">FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES</a></p><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>该论文主要集中于低资源下大模型的训练问题，提出LOMO优化器，使得大模型全参数微调成本更低，单卡24G即能微调LLaMA7B。</p><h1 id="方法介绍"><a href="#方法介绍" class="headerlink" title="方法介绍"></a>方法介绍</h1><p><img src="/fig1.jpg" alt></p><p>伪代码如下<br><img src="/fig2.jpg" alt></p><p>借鉴了SGD优化器的使用，没有使用动量计算梯度，相对于SGD的区别在于按步更新模型参数，即计算某个参数的梯度后立即更新该参数的梯度，而不是传统优化器那样计算完梯度后全量更新模型参数。使得优化器的状态不会被存储在显存中，且只需要存储一个参数的梯度，显著降低了使用的显存。</p><p>显存降低情况如下图所示<br><img src="/table1.jpg" alt></p><p>不过该方法的训练速度比较慢，可能是使用了deepspeed zero3以及按步更新模型参数的原因。实测该速度还不如int4 lora微调llama，不过这是全量微调，且使用的显存明显降低，算是提供了一种可行性方式。<br><img src="/table2.jpg" alt></p><h1 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h1><p><img src="/table3.jpg" alt></p><p>该实验结果都是基于自己的实验上比较的，未和公开的实验论文相比较，且实验结果是按照最好结果报告的，具有一定的参考意义，不过证明了LOMO的可行性。</p>]]></content>
       
       
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+          <category> NLP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LLM </tag>
+            
+            <tag> Pre-training </tag>
+            
+        </tags>
       
     </entry>
     
