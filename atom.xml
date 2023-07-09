@@ -6,7 +6,7 @@
   <link href="https://imounttai.github.io/atom.xml" rel="self"/>
   
   <link href="https://imounttai.github.io/"/>
-  <updated>2023-03-11T15:45:06.316Z</updated>
+  <updated>2023-07-09T08:33:22.015Z</updated>
   <id>https://imounttai.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES</title>
+    <link href="https://imounttai.github.io/lomo.html"/>
+    <id>https://imounttai.github.io/lomo.html</id>
+    <published>2023-07-09T08:15:15.000Z</published>
+    <updated>2023-07-09T08:33:22.015Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;论文&lt;a href=&quot;https://arxiv.org/abs/2306.09782&quot;&gt;FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES&lt;/a&gt;&lt;/p&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>deepspeed</title>
