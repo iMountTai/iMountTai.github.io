@@ -1,5 +1,6 @@
 https://imounttai.github.io/ceshi.html
 https://imounttai.github.io/lomo.html
+https://imounttai.github.io/qlora.html
 https://imounttai.github.io/deepspeed.html
 https://imounttai.github.io/mobilebert.html
 https://imounttai.github.io/bert-to-lstm.html

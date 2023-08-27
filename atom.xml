@@ -60,6 +60,29 @@
   </entry>
   
   <entry>
+    <title>QLoRA-Efficient Finetuning of Quantized LLMs</title>
+    <link href="https://imounttai.github.io/qlora.html"/>
+    <id>https://imounttai.github.io/qlora.html</id>
+    <published>2023-05-28T07:35:21.000Z</published>
+    <updated>2023-08-27T08:59:42.864Z</updated>
+    
+    
+    <summary type="html">高效精调</summary>
+    
+    
+    
+    <category term="人工智能" scheme="https://imounttai.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="NLP" scheme="https://imounttai.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/NLP/"/>
+    
+    
+    <category term="LLM" scheme="https://imounttai.github.io/tags/LLM/"/>
+    
+    <category term="Pre-training" scheme="https://imounttai.github.io/tags/Pre-training/"/>
+    
+  </entry>
+  
+  <entry>
     <title>deepspeed</title>
     <link href="https://imounttai.github.io/deepspeed.html"/>
     <id>https://imounttai.github.io/deepspeed.html</id>
