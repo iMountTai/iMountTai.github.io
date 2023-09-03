@@ -4,11 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ceshi, 被动学习">
+    <meta name="keywords" content="DeepSpeed-Chat Llama/Llama-2, 被动学习">
     <meta name="baidu-site-verification" content="code-0cpWDYunkM" />
     <meta name="google-site-verification" content="ERyD9x2BzhwQPlITH_IY7aZZUGfb1ZWGrZSDraIYlWw" />
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" />
-    <meta name="description" content="ceshi | iMountTai`s Blog">
+    <meta name="description" content="blogDeepSpeed-Chat for llama/llama2
+简介DeepSpeed-Chat 是一个用于 RLHF 训练的通用系统框架，它能够轻松、快速、经济、可扩展地训练类似于 ChatGPT 的模型， GitHub。
+已更新">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>ceshi | iMountTai`s Blog</title>
+    <title>DeepSpeed-Chat Llama/Llama-2 | iMountTai`s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -467,13 +469,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        ceshi
+                        DeepSpeed-Chat Llama/Llama-2
                     </div>
                 </div>
             </div>
@@ -583,11 +585,32 @@
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        <span class="chip bg-color">无标签</span>
+                        
+                        <a href="/tags/LLM/" target="_blank">
+                            <span class="chip bg-color">LLM</span>
+                        </a>
+                        
+                        <a href="/tags/Pre-training/" target="_blank">
+                            <span class="chip bg-color">Pre-training</span>
+                        </a>
+                        
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                        <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
+                            人工智能
+                        </a>
+                        
+                        <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/NLP/" class="post-category" target="_blank">
+                            NLP
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -595,7 +618,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-08-27
+                    2023-08-31
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -609,14 +632,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    581
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
                 
@@ -632,7 +655,38 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>blog<a target="_blank" rel="noopener" href="https://github.com/microsoft/DeepSpeed/blob/master/blogs/deepspeed-chat/ds-chat-release-8-31/README.md">DeepSpeed-Chat for llama/llama2</a></p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>DeepSpeed-Chat 是一个用于 RLHF 训练的通用系统框架，它能够轻松、快速、经济、可扩展地训练类似于 ChatGPT 的模型， <a target="_blank" rel="noopener" href="https://github.com/microsoft/DeepSpeedExamples/tree/master/applications/DeepSpeed-Chat">GitHub</a>。</p>
+<p>已更新对 Llama/Llama-2 模型系列的系统支持。实现了并利用了各种优化和功能，包括混合引擎(Hybrid Engine)、ZeRO 优化系列(ZeRO family of optimizations)、低秩自适应（LoRA）支持，以及完全整合到三阶段的 DeepSpeed-Chat RLHF 流程中。通过利用混合引擎，将 Llama-2-7B 和 Llama-2-13B 模型的体验生成阶段加速了最多 7.1 倍。</p>
+<h1 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h1><p>DeepSpeed-Chat 训练框架现在在训练的所有三个阶段都提供了对 Llama 和 Llama-2 模型的系统支持。Llama 模型架构与标准的 Transformer 模块不同，与 DeepSpeed 的推断内核和混合引擎所使用的 DeepSpeed 容器策略不兼容。作者在DeepSpeed-Chat 流程和 DeepSpeed 运行时中进行广泛的修改，包括支持 ZeRO 优化系列及其与混合引擎中优化推断内核的交互的代码，从而解决了这些挑战，以确保 DeepSpeed-Chat 可以支持 Llama 和 Llama-2，并为用户提供最佳体验。</p>
+<h1 id="关键支持的优化"><a href="#关键支持的优化" class="headerlink" title="关键支持的优化"></a>关键支持的优化</h1><p>以下是已经完全整合到 Llama 和 Llama-2 模型中的 DeepSpeed 的关键优化技术：</p>
+<ul>
+<li>DeepSpeed-Chat 整合：已完全整合到完整的、端到端的三阶段 DeepSpeed-Chat RLHF 训练框架中，基于 OpenAI InstructGPT 训练策略。</li>
+<li>混合引擎：DeepSpeed 混合引擎允许在生成阶段实现卓越的加速，现在支持所有 Llama-1 模型变种、Llama-2-7B 和 Llama-2-13B 模型。</li>
+<li>ZeRO 和 ZeRO-Offload：完全支持 ZeRO 优化系列，包括利用系统的全部内存容量进行卸载支持，从而使训练更大模型成为可能。</li>
+<li>混合精度 ZeRO++（MixZ++）：通过新的 MixZ++ 功能，增强了对更大模型（如 Llama-2-70B）的支持，提高了效率，并在存在冻结或不可训练参数时减少了内存使用。<br>LoRA：完全支持 LoRA 功能，通过冻结原始权重并学习秩分解矩阵对，大幅减少了大型语言模型的存储需求。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Step Number</th>
+<th align="center">Scripts</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://github.com/microsoft/DeepSpeedExamples/tree/master/applications/DeepSpeed-Chat/training/step1_supervised_finetuning/training_scripts/llama2">Llama-2 Step 1 Scripts</a></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://github.com/microsoft/DeepSpeedExamples/tree/master/applications/DeepSpeed-Chat/training/step2_reward_model_finetuning/training_scripts/llama2">Llama-2 Step 2 Scripts</a></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://github.com/microsoft/DeepSpeedExamples/tree/master/applications/DeepSpeed-Chat/training/step3_rlhf_finetuning/training_scripts/llama2">Llama-2 Step 3 Scripts</a></td>
+</tr>
+</tbody></table>
+
             </div>
             <hr />
 
@@ -790,9 +844,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《ceshi》
+                    《DeepSpeed-Chat Llama/Llama-2》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/ceshi.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/deepspeed-chat.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 yao
             </a> 采用
@@ -833,7 +887,7 @@
         repo: 'iMountTai.github.io',
         owner: 'iMountTai',
         admin: "iMountTai",
-        id: 'ceshi.html',
+        id: 'deepspeed-chat.html',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1122,31 +1176,56 @@
                 <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/ceshi.html">
+                <a href="/deepspeed-chat.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="ceshi">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="DeepSpeed-Chat Llama/Llama-2">
                         
-                        <span class="card-title">ceshi</span>
+                        <span class="card-title">DeepSpeed-Chat Llama/Llama-2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            blogDeepSpeed-Chat for llama/llama2
+简介DeepSpeed-Chat 是一个用于 RLHF 训练的通用系统框架，它能够轻松、快速、经济、可扩展地训练类似于 ChatGPT 的模型， GitHub。
+已更新
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-08-27
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-08-31
                             </span>
                         <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
+                                    人工智能
+                                </a>
+                            
+                            <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/NLP/" class="post-category" target="_blank">
+                                    NLP
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/LLM/" target="_blank">
+                        <span class="chip bg-color">LLM</span>
+                    </a>
+                    
+                    <a href="/tags/Pre-training/" target="_blank">
+                        <span class="chip bg-color">Pre-training</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1377,7 +1456,7 @@
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">3.8k
+            <span class="white-color">4.5k
              丨            
           
 
@@ -1463,7 +1542,7 @@
       <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">3.8k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">4.5k</span>
     </div>
 </footer>
 

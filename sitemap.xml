@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://imounttai.github.io/qlora.html</loc>
+    <loc>https://imounttai.github.io/deepspeed-chat.html</loc>
     
-    <lastmod>2023-09-03T14:26:20.567Z</lastmod>
+    <lastmod>2023-09-03T14:54:45.626Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://imounttai.github.io/ceshi.html</loc>
+    <loc>https://imounttai.github.io/deepspeed.html</loc>
     
-    <lastmod>2023-08-27T08:58:05.252Z</lastmod>
+    <lastmod>2023-09-03T14:36:45.906Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://imounttai.github.io/qlora.html</loc>
+    
+    <lastmod>2023-09-03T14:26:20.567Z</lastmod>
     
   </url>
   
@@ -54,13 +61,6 @@
     <loc>https://imounttai.github.io/about/index.html</loc>
     
     <lastmod>2023-08-27T08:25:27.613Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://imounttai.github.io/deepspeed.html</loc>
-    
-    <lastmod>2023-08-27T08:25:27.610Z</lastmod>
     
   </url>
   

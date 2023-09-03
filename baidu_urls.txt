@@ -1,4 +1,4 @@
-https://imounttai.github.io/ceshi.html
+https://imounttai.github.io/deepspeed-chat.html
 https://imounttai.github.io/lomo.html
 https://imounttai.github.io/qlora.html
 https://imounttai.github.io/deepspeed.html

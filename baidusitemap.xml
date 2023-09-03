@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://imounttai.github.io/qlora.html</loc>
+    <loc>https://imounttai.github.io/deepspeed-chat.html</loc>
     <lastmod>2023-09-03</lastmod>
   </url>
   <url>
-    <loc>https://imounttai.github.io/ceshi.html</loc>
-    <lastmod>2023-08-27</lastmod>
+    <loc>https://imounttai.github.io/deepspeed.html</loc>
+    <lastmod>2023-09-03</lastmod>
   </url>
   <url>
-    <loc>https://imounttai.github.io/deepspeed.html</loc>
-    <lastmod>2023-08-27</lastmod>
+    <loc>https://imounttai.github.io/qlora.html</loc>
+    <lastmod>2023-09-03</lastmod>
   </url>
   <url>
     <loc>https://imounttai.github.io/bert-to-lstm.html</loc>

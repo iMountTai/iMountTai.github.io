@@ -11,8 +11,10 @@
     <meta name="description" content="deepspeed config 键值使用
 
 train_batch_size：设置训练时的批量大小。
+
 gradient_accumulation_steps：设置梯度累积的步数，以减少通信开销和内存占用。
-fp16：设置是否使用混合精度训">
+
+fp16：设置是否使用混合精">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -634,7 +636,7 @@ fp16：设置是否使用混合精度训">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    255
+                    364
                 </div>
                 
 
@@ -659,11 +661,48 @@ fp16：设置是否使用混合精度训">
             <div id="articleContent">
                 <p>deepspeed config 键值使用</p>
 <ul>
-<li>train_batch_size：设置训练时的批量大小。</li>
-<li>gradient_accumulation_steps：设置梯度累积的步数，以减少通信开销和内存占用。</li>
-<li>fp16：设置是否使用混合精度训练，以提高速度和减少内存占用。</li>
-<li>zero_optimization：设置是否使用ZeRO优化器，以进一步减少内存占用和提高扩展性。</li>
-<li>optimizer：设置训练优化器的类型和参数，如Adam、Lamb等。</li>
+<li><p>train_batch_size：设置训练时的批量大小。</p>
+</li>
+<li><p>gradient_accumulation_steps：设置梯度累积的步数，以减少通信开销和内存占用。</p>
+</li>
+<li><p>fp16：设置是否使用混合精度训练，以提高速度和减少内存占用。<code>min_loss_scale</code>参数有时候可以设置为<code>1e-10</code>防止loss scale at minimum问题。</p>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token property">"fp16"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token property">"enabled"</span><span class="token operator">:</span> <span class="token string">"auto"</span><span class="token punctuation">,</span>
+  <span class="token property">"auto_cast"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token property">"loss_scale"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token property">"initial_scale_power"</span><span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span>
+  <span class="token property">"loss_scale_window"</span><span class="token operator">:</span> <span class="token number">1000</span><span class="token punctuation">,</span>
+  <span class="token property">"hysteresis"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token property">"consecutive_hysteresis"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token property">"min_loss_scale"</span><span class="token operator">:</span> <span class="token number">1</span>
+&amp;#<span class="token number">125</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>zero_optimization：设置是否使用ZeRO优化器，以进一步减少内存占用和提高扩展性。</p>
+</li>
+</ul>
+<pre class="line-numbers language-json"><code class="language-json">  <span class="token property">"zero_optimization"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token property">"stage"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span>|<span class="token number">1</span>|<span class="token number">2</span>|<span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"allgather_partitions"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token boolean">true</span>|<span class="token boolean">false</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"allgather_bucket_size"</span><span class="token operator">:</span> <span class="token number">5e8</span><span class="token punctuation">,</span>
+    <span class="token property">"overlap_comm"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"reduce_scatter"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token boolean">true</span>|<span class="token boolean">false</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"reduce_bucket_size"</span><span class="token operator">:</span> <span class="token number">5e8</span><span class="token punctuation">,</span>
+    <span class="token property">"contiguous_gradients"</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token boolean">true</span>|<span class="token boolean">false</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"offload_param"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+      ...
+    &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+  &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>optimizer：设置训练优化器的类型和参数，如Adam、Lamb等。具体参数可能由transformers设置，因此config设置为“auto”即可。<pre class="line-numbers language-json"><code class="language-json"><span class="token property">"optimizer"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"Adam"</span><span class="token punctuation">,</span>
+  <span class="token property">"params"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token property">"lr"</span><span class="token operator">:</span> <span class="token string">"auto"</span><span class="token punctuation">,</span>
+    <span class="token property">"betas"</span><span class="token operator">:</span> <span class="token string">"auto"</span><span class="token punctuation">,</span>
+    <span class="token property">"eps"</span><span class="token operator">:</span> <span class="token string">"auto"</span><span class="token punctuation">,</span>
+    <span class="token property">"weight_decay"</span><span class="token operator">:</span> <span class="token string">"auto"</span>
+  &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+&amp;#<span class="token number">125</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 <li>scheduler：设置学习率调度器的类型和参数，如WarmupLR、OneCycle等。</li>
 <li>train_micro_batch_size_per_gpu：设置每个GPU上训练时的微批量大小。</li>
 <li>steps_per_print：设置每隔多少步打印训练日志。</li>
@@ -1444,7 +1483,7 @@ introductionMobileBERT被设计成和$BERT_{large}$一样深，而每一
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">3.8k
+            <span class="white-color">4.5k
              丨            
           
 
@@ -1530,7 +1569,7 @@ introductionMobileBERT被设计成和$BERT_{large}$一样深，而每一
       <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">3.8k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">4.5k</span>
     </div>
 </footer>
 
