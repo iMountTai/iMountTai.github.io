@@ -655,7 +655,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>论文<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2305.14314">QLORA: Efficient Finetuning of Quantized LLMs</a></p>
-<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>作者提出了QLORA，一种高效的微调方法，可以在单个48GB的GPU上微调一个65B参数的模型，同时保持完整的16位微调任务性能，从而降低内存使用。QLORA通过将梯度反向传播到一个冻结的、4位量化的预训练语言模型中，然后传播到LoRA。并将最好的模型系列命名为Guanaco，在Vicuna基准测试中表现优于所有先前公开发布的模型，仅需要在单个GPU上进行24小时的微调即可达到ChatGPT性能水平的99.3%。QLORA引入了许多创新来节省内存，而不牺牲性能：（a）4位NormalFloat（NF4），这是一种对于正态分布权重在信息理论上最优的新数据类型；（b）双重量化，通过量化量化常数来减少平均内存占用；（c）分页优化器，用于管理内存峰值。作者使用QLORA微调了1000多个模型，并对8个指令数据集、多个模型类型（LLaMA、T5）以及通常无法使用常规微调运行的模型规模（例如33B和65B参数模型）进行了详细的指令遵循和聊天机器人性能分析。结果显示，QLoRA在一个小的高质量数据集上微调可以实现最先进的结果，甚至在使用比先前最先进模型更小的模型时也是如此。文章基于人类和GPT-4评估提供了详细的聊天机器人性能分析，表明GPT-4评估是人类评估的一种廉价合理的替代方法。此外，作者还发现当前的聊天机器人基准测试不能够可靠地评估聊天机器人的性能水平。<br><img src="https://github.com/iMountTai/iMountTai.github.io/blob/main/qlora/qlora.jpg" alt></p>
+<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>作者提出了QLORA，一种高效的微调方法，可以在单个48GB的GPU上微调一个65B参数的模型，同时保持完整的16位微调任务性能，从而降低内存使用。QLORA通过将梯度反向传播到一个冻结的、4位量化的预训练语言模型中，然后传播到LoRA。并将最好的模型系列命名为Guanaco，在Vicuna基准测试中表现优于所有先前公开发布的模型，仅需要在单个GPU上进行24小时的微调即可达到ChatGPT性能水平的99.3%。QLORA引入了许多创新来节省内存，而不牺牲性能：（a）4位NormalFloat（NF4），这是一种对于正态分布权重在信息理论上最优的新数据类型；（b）双重量化，通过量化量化常数来减少平均内存占用；（c）分页优化器，用于管理内存峰值。作者使用QLORA微调了1000多个模型，并对8个指令数据集、多个模型类型（LLaMA、T5）以及通常无法使用常规微调运行的模型规模（例如33B和65B参数模型）进行了详细的指令遵循和聊天机器人性能分析。结果显示，QLoRA在一个小的高质量数据集上微调可以实现最先进的结果，甚至在使用比先前最先进模型更小的模型时也是如此。文章基于人类和GPT-4评估提供了详细的聊天机器人性能分析，表明GPT-4评估是人类评估的一种廉价合理的替代方法。此外，作者还发现当前的聊天机器人基准测试不能够可靠地评估聊天机器人的性能水平。<br><img src="/qlora.jpg" alt></p>
 <h1 id="QLORA-Finetuning"><a href="#QLORA-Finetuning" class="headerlink" title="QLORA Finetuning"></a>QLORA Finetuning</h1><p>具体的量化方式看不懂，主要的配置如下，<a target="_blank" rel="noopener" href="https://github.com/artidoro/qlora">代码</a>已开源，可参考配置</p>
 <ul>
 <li><strong>4-bit NormalFloat Quantization</strong></li>
@@ -679,7 +679,7 @@ model <span class="token operator">=</span> AutoModelForCausalLM<span class="tok
         load_in_8bit<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span>
 <span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="Training-setting"><a href="#Training-setting" class="headerlink" title="Training setting"></a>Training setting</h1><p>设置LoRA的r为64，α为16，并在基础模型的所有线性层上添加LoRA模块。对于13B及以下的模型，使用Adam的beta2为0.999，最大梯度范数为0.3，以及LoRA的dropout为0.1；而对于33B和65B的模型，dropout设为0.05。</p>
-<p><img src="https://github.com/iMountTai/iMountTai.github.io/blob/main/qlora/setting.jpg" alt></p>
+<p><img src="/setting.jpg" alt></p>
 
             </div>
             <hr />
