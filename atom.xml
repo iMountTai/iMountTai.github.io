@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>iMountTai`s Blog</title>
+  <title>iMountTai&#39;s Blog</title>
   
-  <subtitle>iMountTai</subtitle>
+  <subtitle>AI, NLP, LLM 学习笔记</subtitle>
   <link href="https://imounttai.github.io/atom.xml" rel="self"/>
   
   <link href="https://imounttai.github.io/"/>
