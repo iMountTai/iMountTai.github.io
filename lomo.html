@@ -4,12 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES, AI,NLP,LLM,深度学习,预训练模型,知识蒸馏,模型微调,工程实践">
+    <meta name="keywords" content="LOMO：低资源下的大语言模型全参数微调, AI,NLP,LLM,深度学习,预训练模型,知识蒸馏,模型微调,工程实践">
     <meta name="baidu-site-verification" content="code-0cpWDYunkM" />
     <meta name="google-site-verification" content="ERyD9x2BzhwQPlITH_IY7aZZUGfb1ZWGrZSDraIYlWw" />
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" />
-    <meta name="description" content="论文FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES
-简介该论文主要集中于低资源下大模型的训练问题，提出LOMO优化器，使得大模型全参数微">
+    <meta name="description" content="论文：FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES
+简介这篇论文关注低资源条件下的大语言模型全参数微调问题，提出了 LOMO 优化器。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES | iMountTai&#39;s Blog</title>
+    <title>LOMO：低资源下的大语言模型全参数微调 | iMountTai&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -448,13 +448,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES
+                        LOMO：低资源下的大语言模型全参数微调
                     </div>
                 </div>
             </div>
@@ -569,8 +569,8 @@
                             <span class="chip bg-color">LLM</span>
                         </a>
                         
-                        <a href="/tags/Pre-training/" target="_blank">
-                            <span class="chip bg-color">Pre-training</span>
+                        <a href="/tags/Fine-tuning/" target="_blank">
+                            <span class="chip bg-color">Fine-tuning</span>
                         </a>
                         
                     </div>
@@ -603,7 +603,7 @@
                 <div class="post-author info-break-policy">
                     <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
                     
-                    yao
+                    iMountTai
                     
                 </div>
 
@@ -611,7 +611,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    348
+                    469
                 </div>
                 
 
@@ -623,26 +623,29 @@
                 
                 
 
-                
-                <div id="busuanzi_container_page_pv" class="info-break-policy">
-                    <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                    <span id="busuanzi_value_page_pv"></span>
-                </div>
-                
             </div>
         </div>
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>论文<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2306.09782">FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES</a></p>
-<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>该论文主要集中于低资源下大模型的训练问题，提出LOMO优化器，使得大模型全参数微调成本更低，单卡24G即能微调LLaMA7B。</p>
-<h1 id="方法介绍"><a href="#方法介绍" class="headerlink" title="方法介绍"></a>方法介绍</h1><p><img src="https://github.com/iMountTai/iMountTai.github.io/tree/main/LOMO/fig1.jpg" alt></p>
-<p>伪代码如下<br><img src="/fig2.jpg" alt></p>
-<p>借鉴了SGD优化器的使用，没有使用动量计算梯度，相对于SGD的区别在于按步更新模型参数，即计算某个参数的梯度后立即更新该参数的梯度，而不是传统优化器那样计算完梯度后全量更新模型参数。使得优化器的状态不会被存储在显存中，且只需要存储一个参数的梯度，显著降低了使用的显存。</p>
-<p>显存降低情况如下图所示<br><img src="https://github.com/iMountTai/iMountTai.github.io/tree/main/LOMO/table1.jpg" alt></p>
-<p>不过该方法的训练速度比较慢，可能是使用了deepspeed zero3以及按步更新模型参数的原因。实测该速度还不如int4 lora微调llama，不过这是全量微调，且使用的显存明显降低，算是提供了一种可行性方式。<br><img src="https://github.com/iMountTai/iMountTai.github.io/tree/main/LOMO/table2.jpg" alt></p>
-<h1 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h1><p><img src="https://github.com/iMountTai/iMountTai.github.io/tree/main/LOMO/table3.jpg" alt></p>
-<p>该实验结果都是基于自己的实验上比较的，未和公开的实验论文相比较，且实验结果是按照最好结果报告的，具有一定的参考意义，不过证明了LOMO的可行性。</p>
+                <p>论文：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2306.09782">FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES</a></p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>这篇论文关注低资源条件下的大语言模型全参数微调问题，提出了 LOMO 优化器。它通过减少优化器状态和梯度缓存，将全参数微调的显存成本降下来，使单卡 24GB 显存微调 LLaMA-7B 具备可行性。</p>
+<h1 id="方法介绍"><a href="#方法介绍" class="headerlink" title="方法介绍"></a>方法介绍</h1><img src="/lomo/fig1.jpg" class title="LOMO 方法示意图">
+
+<p>伪代码如下：</p>
+<img src="/lomo/fig2.jpg" class title="LOMO 伪代码">
+
+<p>LOMO 的思路借鉴了 SGD，没有使用动量项来维护额外的优化器状态。它和普通 SGD 的主要区别在于参数更新时机：在反向传播过程中计算到某个参数的梯度后，就立即更新该参数，而不是等所有梯度都计算完成后再统一更新。</p>
+<p>这样做可以避免在显存中长期保存完整的优化器状态和全部参数梯度，只需要保存当前正在处理的梯度，从而显著降低显存占用。</p>
+<p>显存降低情况如下图所示：</p>
+<img src="/lomo/table1.jpg" class title="显存占用对比">
+
+<p>不过，这种方法的训练速度相对较慢，可能和 ZeRO-3 的通信开销以及逐步更新参数的实现方式有关。和 int4 LoRA 微调 LLaMA 相比，LOMO 的速度并不占优；但它处理的是全参数微调问题，显存占用也明显降低，因此更适合作为低资源全量微调的一种可行路径。</p>
+<img src="/lomo/table2.jpg" class title="训练速度对比">
+
+<h1 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h1><img src="/lomo/table3.jpg" class title="实验结果对比">
+
+<p>论文中的实验主要在作者设定的任务和配置下比较，并且结果按最佳表现报告，因此更适合作为方法可行性的参考。整体来看，LOMO 证明了低资源条件下进行大模型全参数微调的可行性，但在训练速度、稳定性和不同任务上的泛化表现方面，仍需要结合具体场景继续验证。</p>
 
             </div>
             <hr />
@@ -677,11 +680,11 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES》
+                    《LOMO：低资源下的大语言模型全参数微调》
                 </span> 由
             <a xmlns:cc="http://creativecommons.org/ns#" href="/lomo.html" property="cc:attributionName"
                rel="cc:attributionURL">
-                yao
+                iMountTai
             </a> 采用
             <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                 知识共享署名 4.0 国际许可协议
@@ -867,7 +870,7 @@
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
             + '来源: iMountTai's Blog<br />'
-            + '作者: yao<br />'
+            + '作者: iMountTai<br />'
             + '链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
 
@@ -875,6 +878,9 @@
         window.setTimeout(function () { bodyElement.removeChild(newdiv); }, 200);
     });
 </script>
+
+
+
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
@@ -974,25 +980,6 @@
 </main>
 
 
-<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
-
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-<!-- 代码语言 -->
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-<!-- 代码块复制 -->
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
-<!-- 代码块收缩 -->
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
-<!-- 代码块折行 -->
-<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
-
-
     <footer class="page-footer bg-color">
     <div class="container row center-align">
        <div class="Copy-right">
@@ -1002,7 +989,7 @@
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">5.5k
+            <span class="white-color">5.6k
              丨            
           
 
@@ -1088,7 +1075,7 @@
       <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">5.5k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">5.6k</span>
     </div>
 </footer>
 

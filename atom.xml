@@ -10,7 +10,7 @@
   <id>https://imounttai.github.io/</id>
   
   <author>
-    <name>yao</name>
+    <name>iMountTai</name>
     
   </author>
   
@@ -69,21 +69,14 @@
   </entry>
   
   <entry>
-    <title>FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES</title>
+    <title>LOMO：低资源下的大语言模型全参数微调</title>
     <link href="https://imounttai.github.io/lomo.html"/>
     <id>https://imounttai.github.io/lomo.html</id>
     <published>2023-07-09T08:15:15.000Z</published>
-    <updated>2023-09-03T15:11:00.578Z</updated>
+    <updated>2026-07-04T02:07:16.219Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;论文&lt;a href=&quot;https://arxiv.org/abs/2306.09782&quot;&gt;FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES&lt;/a&gt;&lt;/p&gt;
-&lt;h1</summary>
-        
-      
+    <summary type="html">阅读论文 FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES，整理 LOMO 优化器的核心思路、显存收益和实验结论。</summary>
     
     
     
@@ -94,7 +87,7 @@
     
     <category term="LLM" scheme="https://imounttai.github.io/tags/LLM/"/>
     
-    <category term="Pre-training" scheme="https://imounttai.github.io/tags/Pre-training/"/>
+    <category term="Fine-tuning" scheme="https://imounttai.github.io/tags/Fine-tuning/"/>
     
   </entry>
   

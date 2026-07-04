@@ -62,11 +62,11 @@
     
     
     <entry>
-      <title>FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES</title>
+      <title>LOMO：低资源下的大语言模型全参数微调</title>
       <link href="/lomo.html"/>
       <url>/lomo.html</url>
       
-        <content type="html"><![CDATA[<p>论文<a href="https://arxiv.org/abs/2306.09782">FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES</a></p><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>该论文主要集中于低资源下大模型的训练问题，提出LOMO优化器，使得大模型全参数微调成本更低，单卡24G即能微调LLaMA7B。</p><h1 id="方法介绍"><a href="#方法介绍" class="headerlink" title="方法介绍"></a>方法介绍</h1><p><img src="https://github.com/iMountTai/iMountTai.github.io/tree/main/LOMO/fig1.jpg" alt></p><p>伪代码如下<br><img src="/fig2.jpg" alt></p><p>借鉴了SGD优化器的使用，没有使用动量计算梯度，相对于SGD的区别在于按步更新模型参数，即计算某个参数的梯度后立即更新该参数的梯度，而不是传统优化器那样计算完梯度后全量更新模型参数。使得优化器的状态不会被存储在显存中，且只需要存储一个参数的梯度，显著降低了使用的显存。</p><p>显存降低情况如下图所示<br><img src="https://github.com/iMountTai/iMountTai.github.io/tree/main/LOMO/table1.jpg" alt></p><p>不过该方法的训练速度比较慢，可能是使用了deepspeed zero3以及按步更新模型参数的原因。实测该速度还不如int4 lora微调llama，不过这是全量微调，且使用的显存明显降低，算是提供了一种可行性方式。<br><img src="https://github.com/iMountTai/iMountTai.github.io/tree/main/LOMO/table2.jpg" alt></p><h1 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h1><p><img src="https://github.com/iMountTai/iMountTai.github.io/tree/main/LOMO/table3.jpg" alt></p><p>该实验结果都是基于自己的实验上比较的，未和公开的实验论文相比较，且实验结果是按照最好结果报告的，具有一定的参考意义，不过证明了LOMO的可行性。</p>]]></content>
+        <content type="html"><![CDATA[<p>论文：<a href="https://arxiv.org/abs/2306.09782">FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES</a></p><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>这篇论文关注低资源条件下的大语言模型全参数微调问题，提出了 LOMO 优化器。它通过减少优化器状态和梯度缓存，将全参数微调的显存成本降下来，使单卡 24GB 显存微调 LLaMA-7B 具备可行性。</p><h1 id="方法介绍"><a href="#方法介绍" class="headerlink" title="方法介绍"></a>方法介绍</h1><img src="/lomo/fig1.jpg" class title="LOMO 方法示意图"><p>伪代码如下：</p><img src="/lomo/fig2.jpg" class title="LOMO 伪代码"><p>LOMO 的思路借鉴了 SGD，没有使用动量项来维护额外的优化器状态。它和普通 SGD 的主要区别在于参数更新时机：在反向传播过程中计算到某个参数的梯度后，就立即更新该参数，而不是等所有梯度都计算完成后再统一更新。</p><p>这样做可以避免在显存中长期保存完整的优化器状态和全部参数梯度，只需要保存当前正在处理的梯度，从而显著降低显存占用。</p><p>显存降低情况如下图所示：</p><img src="/lomo/table1.jpg" class title="显存占用对比"><p>不过，这种方法的训练速度相对较慢，可能和 ZeRO-3 的通信开销以及逐步更新参数的实现方式有关。和 int4 LoRA 微调 LLaMA 相比，LOMO 的速度并不占优；但它处理的是全参数微调问题，显存占用也明显降低，因此更适合作为低资源全量微调的一种可行路径。</p><img src="/lomo/table2.jpg" class title="训练速度对比"><h1 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h1><img src="/lomo/table3.jpg" class title="实验结果对比"><p>论文中的实验主要在作者设定的任务和配置下比较，并且结果按最佳表现报告，因此更适合作为方法可行性的参考。整体来看，LOMO 证明了低资源条件下进行大模型全参数微调的可行性，但在训练速度、稳定性和不同任务上的泛化表现方面，仍需要结合具体场景继续验证。</p>]]></content>
       
       
       <categories>
@@ -82,7 +82,7 @@
             
             <tag> LLM </tag>
             
-            <tag> Pre-training </tag>
+            <tag> Fine-tuning </tag>
             
         </tags>
       
