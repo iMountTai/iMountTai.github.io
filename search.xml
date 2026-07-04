@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Codex CLI 接入 Chrome：配置 @Chrome 的完整步骤</title>
+      <link href="/codex-cli-chrome.html"/>
+      <url>/codex-cli-chrome.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>知乎原文：<a href="https://zhuanlan.zhihu.com/p/2056671847337423104">Codex CLI 接入 Chrome：配置 @Chrome 的完整步骤</a></p></blockquote><h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><p>让 Codex CLI 可以在终端里使用 <code>@Chrome</code>，调用本机 Chrome 登录态。</p><p>适合飞书、GitLab、知乎写作页、内部系统这类需要登录的网页。</p><h1 id="1-安装-Chrome-插件"><a href="#1-安装-Chrome-插件" class="headerlink" title="1. 安装 Chrome 插件"></a>1. 安装 Chrome 插件</h1><p>打开官方说明：</p><p><a href="https://developers.openai.com/codex/app/chrome-extension">https://developers.openai.com/codex/app/chrome-extension</a></p><p>按流程安装 Codex Chrome Extension。</p><p>安装后看 Chrome 扩展图标，确认 Codex 扩展显示 <code>Connected</code>。</p><h1 id="2-修改-Codex-配置"><a href="#2-修改-Codex-配置" class="headerlink" title="2. 修改 Codex 配置"></a>2. 修改 Codex 配置</h1><p>打开 Codex 配置文件。</p><p>Windows 路径：</p><pre class="line-numbers language-text"><code class="language-text">C:/Users/你的用户名/.codex/config.toml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>确认下面两行配置存在：</p><pre class="line-numbers language-toml"><code class="language-toml">[plugins."chrome@openai-bundled"]enabled = true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>如果原来是 <code>enabled = false</code>，改成 <code>true</code>。</p><h1 id="3-重启-Codex-CLI"><a href="#3-重启-Codex-CLI" class="headerlink" title="3. 重启 Codex CLI"></a>3. 重启 Codex CLI</h1><p>关闭当前 Codex CLI 会话，重新启动：</p><pre class="line-numbers language-bash"><code class="language-bash">codex<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果 Chrome 扩展刚装好，也建议一起重启 Chrome。</p><h1 id="4-验证-Chrome"><a href="#4-验证-Chrome" class="headerlink" title="4. 验证 @Chrome"></a>4. 验证 @Chrome</h1><p>在 Codex CLI 中输入：</p><pre class="line-numbers language-text"><code class="language-text">@Chrome 打开 https://developers.openai.com/codex/app/chrome-extension 并总结页面内容<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果 Codex 能打开 Chrome 页面并读取内容，说明已经连通。</p><p>也可以测试需要登录态的页面：</p><pre class="line-numbers language-text"><code class="language-text">@Chrome 打开知乎写作页，帮我生成一篇草稿，审核后再发表<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h1 id="5-常见问题"><a href="#5-常见问题" class="headerlink" title="5. 常见问题"></a>5. 常见问题</h1><p><strong>扩展装了，但 @Chrome 不能用：</strong><br>先检查 <code>config.toml</code> 里是不是 <code>enabled = true</code>，然后重启 Codex CLI。</p><p><strong>扩展不是 Connected：</strong><br>确认 Chrome profile 是否正确。多个 Chrome profile 时，扩展必须安装在当前登录网页的那个 profile 里。</p><p><strong>什么时候用 @Chrome：</strong><br>公开网页不一定需要。需要登录态的网页更适合用 <code>@Chrome</code>。</p><h1 id="我的验证"><a href="#我的验证" class="headerlink" title="我的验证"></a>我的验证</h1><p>我本机验证后，Codex CLI 已经可以读取当前 Chrome 标签页，也可以打开知乎写作页写入草稿。</p><p>发布、付款、提交表单这类外部动作，建议仍然手动确认。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工程实践 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Codex </tag>
+            
+            <tag> Chrome </tag>
+            
+            <tag> AI Coding </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>DeepSpeed-Chat Llama/Llama-2</title>
       <link href="/deepspeed-chat.html"/>
       <url>/deepspeed-chat.html</url>

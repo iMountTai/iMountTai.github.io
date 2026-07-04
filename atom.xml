@@ -6,7 +6,7 @@
   <link href="https://imounttai.github.io/atom.xml" rel="self"/>
   
   <link href="https://imounttai.github.io/"/>
-  <updated>2023-09-03T15:18:59.424Z</updated>
+  <updated>2026-07-04T01:49:20.925Z</updated>
   <id>https://imounttai.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Codex CLI 接入 Chrome：配置 @Chrome 的完整步骤</title>
+    <link href="https://imounttai.github.io/codex-cli-chrome.html"/>
+    <id>https://imounttai.github.io/codex-cli-chrome.html</id>
+    <published>2026-07-03T16:00:00.000Z</published>
+    <updated>2026-07-04T01:49:20.925Z</updated>
+    
+    
+    <summary type="html">Codex CLI 接入 Chrome Extension 的配置与验证步骤。</summary>
+    
+    
+    
+    <category term="工程实践" scheme="https://imounttai.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+    <category term="Codex" scheme="https://imounttai.github.io/tags/Codex/"/>
+    
+    <category term="Chrome" scheme="https://imounttai.github.io/tags/Chrome/"/>
+    
+    <category term="AI Coding" scheme="https://imounttai.github.io/tags/AI-Coding/"/>
+    
+  </entry>
   
   <entry>
     <title>DeepSpeed-Chat Llama/Llama-2</title>

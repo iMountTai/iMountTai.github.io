@@ -4,11 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="AI,NLP,LLM,深度学习,预训练模型,知识蒸馏,模型微调,工程实践">
+    <meta name="keywords" content="标签: Chrome, AI,NLP,LLM,深度学习,预训练模型,知识蒸馏,模型微调,工程实践">
     <meta name="baidu-site-verification" content="code-0cpWDYunkM" />
     <meta name="google-site-verification" content="ERyD9x2BzhwQPlITH_IY7aZZUGfb1ZWGrZSDraIYlWw" />
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" />
-    <meta name="description" content="iMountTai&#39;s Blog">
+    <meta name="description" content="标签: Chrome | iMountTai&#39;s Blog">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>iMountTai&#39;s Blog</title>
+    <title>标签: Chrome | iMountTai&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -430,56 +430,9 @@
 
 </header>
 
-    
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color:rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-
-    <div class="carousel-item red white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
@@ -487,7 +440,7 @@
                     AI, NLP, LLM 学习笔记
                  -->
                 
-                    AI, NLP, LLM 学习笔记
+                    标签
                 
             </div>
 
@@ -504,129 +457,117 @@
 // 每天切换 banner 图.  Switch banner image every day.
 $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
 </script>
-
-            <div class="cover-btns">
-                <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-                <a href="https://github.com/iMountTai" class="waves-effect waves-light btn" target="_blank">
-                    <i class="fa fa-github-alt"></i>Github
-                </a>
-                
-            </div>
-            <div class="cover-social-link">
-    <a href="https://github.com/iMountTai" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fa fa-github"></i>
-    </a>
-
-
-
-    <a href="https://blog.csdn.net/taiyaoyao?type=blog" class="tooltipped" target="_blank" data-tooltip="访问我的CSDN主页" data-position="top" data-delay="50">
-        <i class="fa fa-codiepie"></i>
-    </a>
-
-
-
-    <a href="https://www.zhihu.com/people/xiao-ge-91-95" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
-        <i class="fa fa-inverse">知</i>
-    </a>
-
-
-<!-- 
-
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fa fa-rss"></i>
-    </a>
- --></div>
-        </div>
     </div>
-
-    
 </div>
-
-<script>
-$(function () {
-    let coverSlider = $('.carousel');
-    coverSlider.carousel({
-        duration: Number('120'),
-        fullWidth: true,
-        indicators: 'true' === 'true'
-    });
-
-    let carouselIntervalId;
-    
-    // Loop to call the next cover article picture.
-    let autoCarousel = function() {
-        carouselIntervalId = setInterval(function () {
-            coverSlider.carousel('next');
-        }, 5000);
-    };
-    autoCarousel();
-    
-
-    let restartPlay = function () {
-        
-        clearInterval(carouselIntervalId);
-        autoCarousel();
-        
-    };
-
-    
-    // prev and next cover post.
-    $('#prev-cover').click(function () {
-        coverSlider.carousel('prev');
-        restartPlay();
-    });
-    $('#next-cover').click(function () {
-        coverSlider.carousel('next');
-        restartPlay();
-    });
-    
-});
-</script>
-
-
 
 <main class="content">
 
     
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
 
-                    
-
-                    
-
-                    <div id="recommend-sections" class="recommend">
-                        
-
-
-
-                    </div>
-                </div>
+<div id="tags" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fa fa-tags"></i>&nbsp;&nbsp;文章标签
+            </div>
+            <div class="tag-chips">
+                
+                
+                <a href="/tags/LLM/" title="LLM: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="LLM" style="background-color: #F9EBEA;">LLM
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Pre-training/" title="Pre-training: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Pre-training" style="background-color: #F5EEF8;">Pre-training
+                        <span class="tag-length">3</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8F/" title="知识蒸馏: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="知识蒸馏" style="background-color: #D5F5E3;">知识蒸馏
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/BERT/" title="BERT: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="BERT" style="background-color: #E8F8F5;">BERT
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/KD/" title="KD: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="KD" style="background-color: #FEF9E7;">KD
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Codex/" title="Codex: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Codex" style="background-color: #F8F9F9;">Codex
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Chrome/" title="Chrome: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="Chrome" style="background-color: #82E0AA;">Chrome
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/AI-Coding/" title="AI Coding: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="AI Coding" style="background-color: #D7BDE2;">AI Coding
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/chatgpt/" title="chatgpt: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="chatgpt" style="background-color: #A3E4D7;">chatgpt
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
             </div>
         </div>
     </div>
-    
+</div>
 
     
 
-    <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
-        <div class="row article-row">
+        <div class="row tags-posts">
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="Codex, Chrome, AI Coding" data-aos="fade-up">
                 <div class="card">
-                    <a href="/codex-cli-chrome.html" target="_blank">
-                        <div class="card-image">
+                    <a href="/codex-cli-chrome.html">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Codex CLI 接入 Chrome：配置 @Chrome 的完整步骤">
@@ -634,13 +575,7 @@ $(function () {
                             <span class="card-title">Codex CLI 接入 Chrome：配置 @Chrome 的完整步骤</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                            记录 Codex CLI 通过 Chrome Extension 使用本机 Chrome 登录态的配置步骤。
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2026-07-04
@@ -650,392 +585,19 @@ $(function () {
                                 <i class="fa fa-bookmark fa-fw icon-category"></i>
                                 
                                 <a href="/categories/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5/" class="post-category" target="_blank">
-                                    工程实践
+                                工程实践
                                 </a>
                                 
                                 
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Codex/" target="_blank">
-                            <span class="chip bg-color">Codex</span>
-                        </a>
-                        
-                        <a href="/tags/Chrome/" target="_blank">
-                            <span class="chip bg-color">Chrome</span>
-                        </a>
-                        
-                        <a href="/tags/AI-Coding/" target="_blank">
-                            <span class="chip bg-color">AI Coding</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/deepspeed-chat.html" target="_blank">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="DeepSpeed-Chat Llama/Llama-2">
-                            
-                            <span class="card-title">DeepSpeed-Chat Llama/Llama-2</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                            blogDeepSpeed-Chat for llama/llama2
-简介DeepSpeed-Chat 是一个用于 RLHF 训练的通用系统框架，它能够轻松、快速、经济、可扩展地训练类似于 ChatGPT 的模型， GitHub。
-已更新
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-08-31
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
-                                    人工智能
-                                </a>
-                                
-                                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/NLP/" class="post-category" target="_blank">
-                                    NLP
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/LLM/" target="_blank">
-                            <span class="chip bg-color">LLM</span>
-                        </a>
-                        
-                        <a href="/tags/Pre-training/" target="_blank">
-                            <span class="chip bg-color">Pre-training</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/lomo.html" target="_blank">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES">
-                            
-                            <span class="card-title">FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                            论文FULL PARAMETER FINE-TUNING FOR LARGE LANGUAGE MODELS WITH LIMITED RESOURCES
-简介该论文主要集中于低资源下大模型的训练问题，提出LOMO优化器，使得大模型全参数微
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-07-09
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
-                                    人工智能
-                                </a>
-                                
-                                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/NLP/" class="post-category" target="_blank">
-                                    NLP
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/LLM/" target="_blank">
-                            <span class="chip bg-color">LLM</span>
-                        </a>
-                        
-                        <a href="/tags/Pre-training/" target="_blank">
-                            <span class="chip bg-color">Pre-training</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/qlora.html" target="_blank">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="QLoRA-Efficient Finetuning of Quantized LLMs">
-                            
-                            <span class="card-title">QLoRA-Efficient Finetuning of Quantized LLMs</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                            论文QLORA: Efficient Finetuning of Quantized LLMs
-摘要作者提出了QLORA，一种高效的微调方法，可以在单个48GB的GPU上微调一个65B参数的模型，同时保持完整的16位微调任务性能，从而降低内
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-05-28
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
-                                    人工智能
-                                </a>
-                                
-                                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/NLP/" class="post-category" target="_blank">
-                                    NLP
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/LLM/" target="_blank">
-                            <span class="chip bg-color">LLM</span>
-                        </a>
-                        
-                        <a href="/tags/Pre-training/" target="_blank">
-                            <span class="chip bg-color">Pre-training</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/deepspeed.html" target="_blank">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="deepspeed">
-                            
-                            <span class="card-title">deepspeed</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                            deepspeed config 键值使用
-
-train_batch_size：设置训练时的批量大小。
-
-gradient_accumulation_steps：设置梯度累积的步数，以减少通信开销和内存占用。
-
-fp16：设置是否使用混合精
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-11
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
-                                    人工智能
-                                </a>
-                                
-                                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/NLP/" class="post-category" target="_blank">
-                                    NLP
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/LLM/" target="_blank">
-                            <span class="chip bg-color">LLM</span>
-                        </a>
-                        
-                        <a href="/tags/chatgpt/" target="_blank">
-                            <span class="chip bg-color">chatgpt</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/mobilebert.html" target="_blank">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="MobileBERT a Compact Task-Agnostic BERT for Resource-Limited Devices">
-                            
-                            <span class="card-title">MobileBERT a Compact Task-Agnostic BERT for Resource-Limited Devices</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                            论文MobileBERT: a Compact Task-Agnostic BERT for Resource-Limited Devices
-introductionMobileBERT被设计成和$BERT_{large}$一样深，而每一
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-08-07
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
-                                    人工智能
-                                </a>
-                                
-                                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/NLP/" class="post-category" target="_blank">
-                                    NLP
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8F/" target="_blank">
-                            <span class="chip bg-color">知识蒸馏</span>
-                        </a>
-                        
-                        <a href="/tags/BERT/" target="_blank">
-                            <span class="chip bg-color">BERT</span>
-                        </a>
-                        
-                        <a href="/tags/KD/" target="_blank">
-                            <span class="chip bg-color">KD</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/bert-to-lstm.html" target="_blank">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Distilling Task-Specific Knowledge from BERT into Simple Neural Networks">
-                            
-                            <span class="card-title">Distilling Task-Specific Knowledge from BERT into Simple Neural Networks</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                            论文Distilling Task-Specific Knowledge from BERT into Simple Neural Networks
-1 介绍2 相关工作模型压缩 一项突出的工作致力于压缩大型神经网络以加速推理.早期的开创性
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-07-26
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
-                                    人工智能
-                                </a>
-                                
-                                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/NLP/" class="post-category" target="_blank">
-                                    NLP
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8F/" target="_blank">
-                            <span class="chip bg-color">知识蒸馏</span>
-                        </a>
-                        
-                        <a href="/tags/BERT/" target="_blank">
-                            <span class="chip bg-color">BERT</span>
-                        </a>
-                        
-                        <a href="/tags/KD/" target="_blank">
-                            <span class="chip bg-color">KD</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
             
         </div>
     </article>
-
 </main>
-
-
-
-
 
 
     <footer class="page-footer bg-color">
